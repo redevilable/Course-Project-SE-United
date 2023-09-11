@@ -42,7 +42,7 @@ int  main(){
 				break; // need to terminate the problem
 			}
 		}
-	if (n==9) // all celles with i=0 to 2 have been inputted above but no winner yet
+	if (!isWin(game)) // all celles with i=0 to 2 have been inputted above but no winner yet
 	   std::cout << "Tie!" << std::endl;
 
 	// show the game to console
