@@ -34,9 +34,9 @@ int  main(){
 			std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
 			std::cin >> i >> j;
 			if (turn == false)
-			   game[i][j] = 'X';
+			   game[i--][j--] = 'X';
 			else 
-			   game[i][j] = 'O';
+			   game[i--][j--] = 'O';
 			if (isWin(game)){
 				std::cout << "Win!" << std::endl;
 				break; // need to terminate the problem
