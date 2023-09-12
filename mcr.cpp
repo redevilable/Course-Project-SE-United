@@ -5,16 +5,16 @@
 
 bool isWin(char game[3][3]){
 	bool win = false;
-	if (game[0][0] == game[0][1] && game[0][1] == game[0][2] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
-	if (game[1][0] == game[1][1] && game[1][1] == game[1][2] && (game[1][0] == 'X' || game[1][0] == 'O')) win = true;
-	if (game[2][0] == game[2][1] && game[2][1] == game[2][2] && (game[2][0] == 'X' || game[2][0] == 'O')) win = true;
+	if (game[0][0] == game[0][1] && game[0][1] == game[0][2] ) win = true;
+	if (game[1][0] == game[1][1] && game[1][1] == game[1][2] ) win = true;
+	if (game[2][0] == game[2][1] && game[2][1] == game[2][2] ) win = true;
 	// column
-	if (game[0][0] == game[1][0] && game[1][0] == game[2][0] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
-	if (game[0][1] == game[1][1] && game[1][1] == game[2][1] && (game[0][1] == 'X' || game[0][1] == 'O')) win = true;
-	if (game[0][2] == game[1][2] && game[1][2] == game[2][2] && (game[0][2] == 'X' || game[0][2] == 'O')) win = true;
+	if (game[0][0] == game[1][0] && game[1][0] == game[2][0] ) win = true;
+	if (game[0][1] == game[1][1] && game[1][1] == game[2][1] ) win = true;
+	if (game[0][2] == game[1][2] && game[1][2] == game[2][2] ) win = true;
 	// diagonal
-	if (game[0][0] == game[1][1] && game[1][1] == game[2][2] && (game[0][0] == 'X' || game[0][0] == 'O')) win = true;
-	if (game[0][2] == game[1][1] && game[1][1] == game[2][0] && (game[0][2] == 'X' || game[0][2] == 'O')) win = true;
+	if (game[0][0] == game[1][1] && game[1][1] == game[2][2] ) win = true;
+	if (game[0][2] == game[1][1] && game[1][1] == game[2][0] ) win = true;
 	return win;
 }
 
@@ -31,7 +31,7 @@ int  main(){
 				std::cout << "Player 1: ";
 			else
 				std::cout << "Player 2: ";
-			std::cout << "Which cell to mark? i:[1..3], j:[1..3]: "; 
+			std::cout << "Which cell to mark? i:[0..2], j:[0..2]: "; 
 			std::cin >> i >> j;
 			if (turn == false)
 			   game[i][j] = 'X';
@@ -42,7 +42,7 @@ int  main(){
 				break; // need to terminate the problem
 			}
 		}
-	if (n==9) // all celles with i=0 to 2 have been inputted above but no winner yet
+	if (!isWin(game)) // all celles with i=0 to 2 have been inputted above but no winner yet
 	   std::cout << "Tie!" << std::endl;
 
 	// show the game to console
