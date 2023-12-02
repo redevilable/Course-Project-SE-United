@@ -79,7 +79,7 @@ public class Gen extends AnAction {
         WriteCommandAction.runWriteCommandAction(currentProject, runnable);
     }
 
-// change the input and output, then test the result
+
     public ArrayList<JSONObject> search(String tar, @NotNull ArrayList<JSONObject> asset) {
         String cooked_tar= Strfoo.cook(tar);
 
