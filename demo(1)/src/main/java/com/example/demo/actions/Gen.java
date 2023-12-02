@@ -107,23 +107,6 @@ public class Gen extends AnAction {
 
         return ret;
     }
-
-// the function below is usless, please delete it 
-    public int write2Pis(AnActionEvent e, String text) {
-        PsiFile pyfile = e.getData(CommonDataKeys.PSI_FILE);
-
-        Editor editor = e.getData(CommonDataKeys.EDITOR);
-//        editor.getSelectionModel()
-        PsiElement piselement = e.getData(CommonDataKeys.PSI_ELEMENT);
-//        PsiElementFactory psiElementFactory=PsiElementF
-
-        Transferable transferable = CopyPasteManager.getInstance().getContents();
-
-        if (pyfile == null || editor == null) {
-            return -1;
-        }
-        return 0;
-    }
 }
 
 
