@@ -36,7 +36,7 @@ public class Gen extends AnAction {
             System.out.println(e.toString());
         }
     }
-
+// please add more conmments to help us understand the code
     @Override
     public void actionPerformed(AnActionEvent e) {
         currentProject = e.getProject();
