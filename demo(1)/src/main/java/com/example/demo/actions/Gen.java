@@ -108,7 +108,7 @@ public class Gen extends AnAction {
         return ret;
     }
 
-
+// the function below is usless, please delete it 
     public int write2Pis(AnActionEvent e, String text) {
         PsiFile pyfile = e.getData(CommonDataKeys.PSI_FILE);
 
